@@ -4,11 +4,16 @@ package net.yoojia.validate.internal;
  * date   : 2013-5-15
  * 输入类型判断工具类
  */
-public class InputType {
+public class InputUtility {
 
+    /**
+     * @param object 输入对象
+     * @return 是否为基本类型及其封装类
+     */
 	public static boolean isPrimitiveType(Object object)
-	 {  
-		Class<?> clazz = object.getClass();
+	 {
+         if(null == object) return false;
+		 Class<?> clazz = object.getClass();
 	     return 
 	     (  
 	    	clazz.isPrimitive()  ||
@@ -23,5 +28,14 @@ public class InputType {
 	        clazz.equals(Boolean.class)
 	     );  
 	 }
+
+
+    public static boolean isEmpty(Object input){
+        if( null == input)return true;
+        String inputS = String.valueOf(input);
+        boolean notEmpty = inputS.length() >= 0 && !inputS.trim().replaceAll("\\s", "").equals("");
+        return !notEmpty;
+    }
+
 
 }

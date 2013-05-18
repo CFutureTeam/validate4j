@@ -1,6 +1,6 @@
 package net.yoojia.validate.support;
 
-import net.yoojia.validate.internal.InputType;
+import net.yoojia.validate.internal.InputUtility;
 import net.yoojia.validate.internal.Rule;
 import net.yoojia.validate.internal.TestResult;
 
@@ -21,7 +21,7 @@ public class RequiredTester extends Tester<Object,Void> {
 	public TestResult test(Object input, Void... args) {
 		
 		//如果不是基本类型
-		if( !InputType.isPrimitiveType(input) ){
+		if( !InputUtility.isPrimitiveType(input) ){
 			throw new IllegalArgumentException("Parameter 'input' ONLY support primitive type.");
 		}
 		

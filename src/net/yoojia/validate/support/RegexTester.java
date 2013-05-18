@@ -1,6 +1,6 @@
 package net.yoojia.validate.support;
 
-import net.yoojia.validate.internal.InputType;
+import net.yoojia.validate.internal.InputUtility;
 import net.yoojia.validate.internal.Rule;
 import net.yoojia.validate.internal.TestResult;
 
@@ -22,7 +22,7 @@ public class RegexTester extends Tester<Object,String>{
 	@Override
 	public TestResult test(Object input, String... args) {
 		
-		if( !InputType.isPrimitiveType(input) ){
+		if( !InputUtility.isPrimitiveType(input) ){
 			throw new IllegalArgumentException("Parameter 'input' ONLY support primitive type.");
 		}
 		
