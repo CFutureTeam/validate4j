@@ -24,29 +24,29 @@
 
     1.创建Validator类
 
-    ```java
-        Validator validator = new Validator();
-    ```
+```java
+    Validator validator = new Validator();
+```
 
     2.配置校验规则
 
-    ```java
-        RuleConfigs configs = validator.getRuleConfigs();
-        // 必填，邮件
-        configs
-        .required()
-        .email()
-    ```
+```java
+    RuleConfigs configs = validator.getRuleConfigs();
+    // 必填，邮件
+    configs
+    .required()
+    .email()
+```
 
     3.对输入数据进行校验
 
-    ```java
-        // 包含校验结果状态和出错提示
-        TestResult result = validator.testResult("chenyoca@gmail.com");
+```java
+    // 包含校验结果状态和出错提示
+    TestResult result = validator.testResult("chenyoca@gmail.com");
 
-        // 简单的结果
-        boolean result = validator.test("yoojia.chen@gmail.com");
-    ```
+    // 简单的结果
+    boolean result = validator.test("yoojia.chen@gmail.com");
+```
 
 ## 内建规则
 
