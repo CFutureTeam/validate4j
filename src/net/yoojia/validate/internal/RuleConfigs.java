@@ -105,7 +105,7 @@ public class RuleConfigs {
 	 * @return RuleConfigs对象，用于链式配置。
 	 */
 	public RuleConfigs number() {
-        testerMapping.put(Rule.Number, new NumberTester());
+        testerMapping.put(Rule.Numeric, new NumericTester());
 		return this;
 	}
 

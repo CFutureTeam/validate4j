@@ -20,7 +20,7 @@ public enum Rule {
 	MobilePhone,
 
 	/* 数字：负数，小数 */
-	Number,
+    Numeric,
 
 	/* 整数 */
 	Digits,

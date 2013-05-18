@@ -7,13 +7,13 @@ import net.yoojia.validate.internal.Rule;
  * date   : 2013-5-16
  * 判断是否为数字
  */
-public class NumberTester extends TesterWithRegex {
+public class NumericTester extends TesterWithRegex {
 
     static final String NUMBER_REGEX = "^-?(?:\\\\d+|\\\\d{1,3}(?:,\\\\d{3})+)?(?:\\\\.\\\\d+)?$";
 
     static final String messageT = "Please enter a valid number.";
 
-    public NumberTester() {
-        super(Rule.Number, NUMBER_REGEX, messageT);
+    public NumericTester() {
+        super(Rule.Numeric, NUMBER_REGEX, messageT);
     }
 }
